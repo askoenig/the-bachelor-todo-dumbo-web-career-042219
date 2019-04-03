@@ -44,10 +44,11 @@ end
 
 def get_occupation(data, hometown)
   data.each do |season_number, contestant_array|
-  contestant_array.each do |detail_hash|
-    detail_hash.each do |key, value|
-  if value == occupation 
-    return detail_hash["name"]
+    contestant_array.each do |detail_hash|
+     detail_hash.each do |key, value|
+      if key == "hometown" 
+        if value == hometown
+          return detail_hash["occupation"]
           end
         end
       end
