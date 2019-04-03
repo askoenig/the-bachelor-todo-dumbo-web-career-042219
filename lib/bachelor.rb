@@ -57,17 +57,20 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
+  x = 0 
   total_age = 0
  data.each do |season_number, contestant_array|
   if season_number == season
     contestant_array.each do |detail_hash|
      detail_hash.each do |key, value|
       if key == "age" 
-       total_age << key.to_f
+        x += 1
+          total_age << key.to_f
           end
         end
       end
     end
   end
+  return (total_age/x)
 end
-end
+
