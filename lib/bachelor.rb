@@ -71,6 +71,6 @@ def get_average_age_for_season(data, season)
       end
     end
   end
-  return (total_age/x)
+  return (total_age.to_f/x.to_f)
 end
 
