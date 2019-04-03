@@ -70,6 +70,7 @@ def get_average_age_for_season(data, season)
         end
       end
     end
+    binding.pry
   end
   return (total_age.to_f/x.to_f)
 end
